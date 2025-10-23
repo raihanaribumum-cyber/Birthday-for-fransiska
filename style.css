@@ -1,0 +1,90 @@
+/* style.css - pastel warm theme */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-align: center;
+  background: linear-gradient(180deg, #fff6f8 0%, #fffaf0 50%, #fffdf6 100%);
+  overflow-x: hidden;
+}
+
+.login-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(255, 182, 193, 0.5);
+  width: 90%;
+  max-width: 420px;
+}
+
+.login-box input {
+  padding: 10px;
+  border: 2px solid #ffd6e0;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 86%;
+  font-size: 1em;
+}
+
+.login-box button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #ff85a2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-weight: bold;
+}
+
+.login-box button:hover { background: #ff9fb8; }
+
+.error { color: #d9534f; font-weight: bold; margin-top: 8px; }
+
+.hint { font-size: 0.85em; color: #666; margin-top: 8px; }
+
+.celebration {
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(120deg, #fff1f0 0%, #fff6e6 40%, #f6fff0 100%);
+}
+
+.container { position: relative; top: 2%; }
+
+h1 { color: #ff6f91; text-shadow: 0 0 12px rgba(255,150,170,0.5); }
+h2 { color: #ff8aa2; margin-top: 6px; }
+.subtitle { color: #5e548e; font-style: italic; margin-bottom: 14px; }
+
+.media-area { margin: 12px auto; width: 640px; max-width: 92%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(255,180,200,0.2); }
+
+.quote { margin-top: 18px; font-size: 1.05em; color: #444; background: rgba(255,255,255,0.7); border-radius: 12px; padding: 12px; display: inline-block; }
+
+.footer { margin-top: 20px; font-size: 1.05em; color: #333; }
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  animation: fall 6s linear infinite;
+  opacity: 0.95;
+  border-radius: 2px;
+}
+
+@keyframes fall { to { transform: translateY(100vh) rotate(720deg); } }
+
+/* canvas styling */
+#butterCanvas { display: block; margin: 0 auto; background: linear-gradient(180deg,#fffbf7,#fffaf3); border-radius: 8px; }
+.music-control { margin-top: 10px; }
+
+#playMusicBtn { padding: 10px 18px; background: #ff85a2; color: #fff; border: none; border-radius: 10px; cursor: pointer; font-weight: 600; }
+#playMusicBtn:hover { background: #ff9fb8; }

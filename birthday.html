@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🎈 Happy Birthday Fransiska 🎈</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="celebration">
+  <div class="container">
+    <h1>💐 Happy 20th Birthday 💐</h1>
+    <h2>Fransiska Bertha Nove 🎉</h2>
+    <p class="subtitle">Selamat naik level dari 19 ke 20 — semoga semakin hangat, kuat, dan bahagia 💛</p>
+
+    <div class="media-area">
+      <!-- Canvas animation as "video" substitute -->
+      <canvas id="butterCanvas" width="640" height="360"></canvas>
+    </div>
+
+    <audio id="bgMusic" src="music.wav" loop></audio>
+    <div id="musicControl" class="music-control" style="display:none;">
+      <button id="playMusicBtn">▶️ Putar Musik</button>
+    </div>
+
+    <div class="quote">
+      <p>“Usia boleh bertambah, tapi semangat dan senyum Fransiska harus tetap muda.” 🌼</p>
+    </div>
+
+    <div class="footer">
+      <p>Dengan hangat dari <b>Reyhan</b> 💌</p>
+    </div>
+
+    <div class="confetti"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Try autoplaying audio; if blocked, show button
+    (function(){
+      const audio = document.getElementById('bgMusic');
+      audio.volume = 0.7;
+      audio.play().then(()=>{
+        console.log('Autoplay OK');
+      }).catch(()=>{
+        document.getElementById('musicControl').style.display = 'block';
+        document.getElementById('playMusicBtn').addEventListener('click', function(){
+          audio.play();
+          this.style.display = 'none';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

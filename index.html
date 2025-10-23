@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💝 Portal Ulang Tahun 💝</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-body">
+  <div class="login-box">
+    <h1>🎂 Portal Spesial 🎂</h1>
+    <p>Masukkan password rahasia dulu ya 💬</p>
+    <input type="password" id="password" placeholder="Ketik password..." />
+    <button id="enterBtn">Masuk</button>
+    <p id="error" class="error"></p>
+    <p class="hint">Password: (masukkan yang diberikan oleh Reyhan)</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('password').addEventListener('keydown', function(e){
+      if (e.key === 'Enter') document.getElementById('enterBtn').click();
+    });
+    document.getElementById('enterBtn').addEventListener('click', checkPassword);
+  </script>
+</body>
+</html>
